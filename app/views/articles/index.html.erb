@@ -19,7 +19,7 @@
                 <td> <%= link_to 'Edit', edit_article_path(article) %> </td>
                 <td> <%= link_to("Delete", article, data: {
                     turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
+                    turbo_confirm: "Are you sure you want to delete article: " + article.title + "?"
                     })%>
                      </td>
             </tr>
@@ -29,4 +29,5 @@
 <br>
 <p>
     <%= link_to 'Create New Article', new_article_path %> 
+    <%= link_to 'Return to Home Page', root_path %> 
 </p>
