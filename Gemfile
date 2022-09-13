@@ -77,5 +77,3 @@ gem 'pg'
 end
 
 gem "byebug", "~> 11.1", :groups => [:development, :test]
-
-gem 'bootstrap', '~> 5.1.3'
