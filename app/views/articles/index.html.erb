@@ -1,28 +1,34 @@
-<h1>Articles Listing Page</h1>
-
+<h1 class="text-center mt-4">Listing All Articles</h1>
 
 
 <% @articles.each do |article| %>
+    <div class="container col-8" >
+<div class="row mt-4"> 
+      <div class="card text-center">
+            <div class="card-header" style="background-color: gray;">
+               <h3 class="card-title" ><%= article.title  %></h3>
+            </div>
 
-    <div class="card" style="width: auto;">
+            <div class="card-body">
+              <p class="card-text"><%= article.description %></p>
+        
+            </div>
 
-    <div class="card-body">
-      <h2 class="card-title" style="color:darkblue;"><%= article.title  %></h2>
-      <p class="card-text" style="margin:0px 0px 0px 50px"> <%= article.description %> </p>
-      <div class="card-text text-end" style="color:gray">id: <%= article.id %> </div>
+            <div class="card-footer text-muted">
+            
+                <div class="card-text text-end" style="color:gray">article id: <%= article.id %> </div>
 
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><%= link_to 'Show', article_path(article) %> | <%= link_to 'Edit', edit_article_path(article) %> |  <%= link_to("Delete", article, data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure you want to delete article: " + article.title + "?"
-        })%></li>
-
-    </ul>
- 
-  </div>
-
-  
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= link_to 'Show', article_path(article) %> | <%= link_to 'Edit', edit_article_path(article) %> |  <%= link_to("Delete", article, data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure you want to delete article: " + article.title + "?"
+                  })%></li>
+              </ul>
+            </div>
+      </div>
+</div>
+</div>
 <% end %>
 
 
@@ -34,34 +40,4 @@
 
 
 
-<table>
-    <thead>
-        <tr>
-        <th>ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th colspan="3">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @articles.each do |article| %>
-            <tr>
-            <td> <%= article.id  %></td>
-                <td> <%= article.title  %></td>
-                <td> <%= article.description %> </td>
-                <td> <%= link_to 'Show', article_path(article) %> </td>
-                <td> <%= link_to 'Edit', edit_article_path(article) %> </td>
-                <td> <%= link_to("Delete", article, data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure you want to delete article: " + article.title + "?"
-                    })%>
-                     </td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
-<br>
-<p>
-    <%= link_to 'Create New Article', new_article_path %> 
-    <%= link_to 'Return to Home Page', root_path %> 
-</p>
+
