@@ -1,17 +1,26 @@
 
 <div id="page-content">
   <div class="container" id="home-container">
-    <div class="p-5 text-center bg-image rounded-3 jumbotron" style="">
-      
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">Alpha-Blog</h1>
-            <h4 class="mb-3">About the alpha-blog application</h4>
-            <a class="btn btn-primary btn-lg mt-4" href="/articles/" role="button">Articles</a>
-          </div>
+
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="http://cincyplanet.com/img/newlogo-glow1-750x433.png" class="d-block mx-lg-auto img-fluid" alt="Cincyplanet Logo" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Alpha Blog Demo App</h1>
+        <p class="lead">A Ruby on Rails app to learn the framework and language.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+           <%= link_to 'Article Listing', articles_path, class: "btn btn-primary btn-lg px-4" %>
+            <%= link_to 'New Article', new_article_path, class: "btn btn-primary btn-lg px-4" %>
         </div>
-    
+      </div>
     </div>
+  </div>
+
+
+
   </div>
 </div> 
 
