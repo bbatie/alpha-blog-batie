@@ -1,0 +1,29 @@
+.navbar {
+  background-color: black;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: rgb(165, 144, 241);
+}
+
+#logo {
+  color: blue;
+
+}
+
+#logo:hover {
+  color: rgb(165, 144, 241);
+}
+
+#home-container {
+  margin-top: 25px;
+}
+
+.jumbotron {
+  background-image: url('home-back-image.jpeg');
+  height: 425px;
+}
