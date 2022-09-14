@@ -1,3 +1,6 @@
+<div class="container bg-info rounded shadow" >
+  <div class="row justify-content-center">
+    <div class="col-10 mt-4">
 
 <% if @article.errors.any?  %>
     <h4>The following errors prevented the article from being saved </h4>
@@ -10,17 +13,21 @@
 
 <%= form_with(model: @article, local: true) do |f| %>
 
-    <p> 
-        <%= f.label :title %><br/>
-        <%= f.text_field :title %>
-    </p>
-    <p>
-        <%= f.label :description %><br/>
-        <%= f.text_area :description %>
-    </p>
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"> <%= f.label :title %></label>
+   <%= f.text_field :title, class: "form-control" %>
+</div>
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"> <%= f.label :description %></label>
+   <%= f.text_area :description, rows: 10,class: "form-control" %>
+</div>
 
     <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-lg btn-success" %>
     </p>
 
 <% end %>
+
+</div>
+</div>
+</div>

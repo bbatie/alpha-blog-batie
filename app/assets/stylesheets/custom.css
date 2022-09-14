@@ -32,11 +32,13 @@
 html,
 body {
   height: 100%;
+  background-color: lightgray;
 }
 
 .page-content {
-  flex: 1 0 auto;
+
   background-color: lightgray;
+
 }
 
 #sticky-footer {
@@ -46,4 +48,5 @@ body {
   clear: both;
   position: fixed;
   bottom: 0;
+
 }

@@ -21,8 +21,8 @@ class ArticlesController < ApplicationController
         if @article.save 
             flash[:notice] = "Article was created successfully."
             redirect_to @article
-       else
-            render 'new'    
+       else 
+           render 'new'    
        end
     end
 
