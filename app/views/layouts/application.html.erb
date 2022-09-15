@@ -18,17 +18,12 @@
     <body class="d-flex flex-column">
       <%= render 'layouts/navigation' %>
      <div id="page-content">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+        <%= render 'layouts/messages' %>
+        <%= yield %>
     </div>
 
+<%= render 'layouts/footer' %>
 
-<br><br><br><br>
-     <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright ©<%= link_to "CincyPlanet", "http://cincyplanet.com", class: "text-white", style: "text-decoration:none" %></small>
-    </div>
-  </footer>
 
 
   </body>
