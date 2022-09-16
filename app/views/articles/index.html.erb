@@ -5,7 +5,7 @@
       <div class="card text-center">
             <div class="card-header mt-4" style="background-color: silver; ">
                <h3 class="card-title bg-primary rounded" ><%= article.title  %></h3>
-                <p class="card-title bg-light  pull-right" >by <%= User.find(article.user_id).username  %></p>
+                <p class="card-title bg-light  pull-right" >by <%= article.user.username  %></p>
             </div>
 
             <div class="card-body">
