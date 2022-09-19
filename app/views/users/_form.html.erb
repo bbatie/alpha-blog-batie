@@ -20,7 +20,7 @@
 </div>
 
     <p>
-    <%= f.submit "Sign Up", class: "btn btn-lg btn-success" %>
+    <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-lg btn-success") %>
     </p>
 
 <% end %>
