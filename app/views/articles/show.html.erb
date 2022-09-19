@@ -1,7 +1,7 @@
     <div class="container col-8 shadow" >
     <h2 class="text-center mt-4 bg-primary"><%= @article.title  %></h2>
      <p class="card-title bg-light  text-center" >by <%= @article.user.username %></p>
-
+<%= link_to gravatar_for(@article.user), user_path(@article.user) %>
 <div class="row mt-4"> 
       <div class="card text-center">
 

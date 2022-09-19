@@ -1,0 +1,41 @@
+<h1 class="text-center mt-4">Alpha Bloggers</h1>
+
+<div class="flickr_pagination mb-4">
+    <%= will_paginate @users, :container => false %>
+  </div>
+
+<% @users.each do |user| %>
+    <div class="container col-8 shadow" >
+<div class="row mt-4"> 
+      <div class="card text-center">
+            <div class="card-header mt-4" style="background-color: silver; ">
+              
+                <h3 class="card-title bg-light  pull-right" ><%= link_to user.username, user  %></h3>
+            </div>
+
+            <div class="card-body">
+            <%= link_to gravatar_for(user, size: 150), user %>
+            </div>
+
+            <div class="card-footer text-muted" style="background-color: silver;margin-bottom: 15px; ">
+            
+
+                <div class="card-text text-center" style="color:gray"> <%= pluralize(user.articles.count, "article") %> </div>
+
+               <ul class="list-group list-group-flush" >
+                <li class="list-group-item  rounded bg-white ">
+                <%= link_to 'View Profile', user, class: "btn btn-small btn-primary" %> 
+                <%= link_to 'Edit Profile', edit_user_path(user), class: "btn btn-small btn-primary" %> 
+                 </li>
+              </ul>
+              </div>
+            <div class="card-text text-center" style="color:gray">Joined  <%= time_ago_in_words(user.created_at) %> ago</div>
+            </div>
+      </div>
+</div>
+</div>
+<% end %>
+
+<div class="flickr_pagination mb-4">
+    <%= will_paginate @users, :container => false %>
+  </div>
