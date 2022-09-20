@@ -11,20 +11,19 @@
             </div>
 
             <div class="card-footer text-muted" style="background-color: silver;margin-bottom: 15px; ">
-            
-              
-
                <ul class="list-group list-group-flush" >
                 <li class="list-group-item  rounded bg-white ">
               
+                <% if logged_in? && @article.user == current_user %>
                  <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-small btn-info" %> 
                  <%= link_to "Delete", @article, data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure you want to delete article: " + @article.title + "?"
                   }, class: "btn btn-small btn-danger" %>
+                   <% end %>
                    <%= link_to 'Back To Listings', articles_path(), class: "btn btn-small btn-secondary" %> 
                   </li>
-                 
+                
               </ul>
               </div>
           

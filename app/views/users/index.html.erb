@@ -25,7 +25,9 @@
                <ul class="list-group list-group-flush" >
                 <li class="list-group-item  rounded bg-white ">
                 <%= link_to 'View Profile', user, class: "btn btn-small btn-primary" %> 
-                <%= link_to 'Edit Profile', edit_user_path(user), class: "btn btn-small btn-primary" %> 
+                <% if logged_in? && user == current_user %>
+                <%= link_to 'Edit Your Profile', edit_user_path(user), class: "btn btn-small btn-primary" %> 
+                <% end %>
                  </li>
               </ul>
               </div>
