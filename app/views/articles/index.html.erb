@@ -1,13 +1,16 @@
 <h1 class="text-center mt-4">Listing All Articles</h1>
 
 <div class="flickr_pagination mb-4">
+<%= unless @articles.empty? %>
     <%= will_paginate @articles, :container => false %>
   </div>
-
+<% end %>
 <%= render "article" %>
 
 
 <div class="flickr_pagination mt-4" >
+<%= unless @articles.empty? %>
     <%= will_paginate @articles, :container => false %>
+    
   </div>
 
