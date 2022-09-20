@@ -78,7 +78,7 @@ end
 
 gem "byebug", "~> 11.1", :groups => [:development, :test]
 
-gem 'will_paginate', '~> 3.3'
+gem 'will_paginate', '~> 3.0'
 
 gem 'rails_12factor'
 
