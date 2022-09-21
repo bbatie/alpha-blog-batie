@@ -22,7 +22,7 @@
                <ul class="list-group list-group-flush" >
                 <li class="list-group-item  rounded bg-white ">
                 <%= link_to 'View', article_path(article), class: "btn btn-small btn-primary" %> 
-                <% if logged_in? && article.user == current_user %>
+                <% if logged_in? && (article.user == current_user || current_user.admin? ) %>
                 <%= link_to 'Edit', edit_article_path(article), class: "btn btn-small btn-primary" %> 
                  <%= link_to "Delete", article, data: {
                   turbo_method: :delete,
