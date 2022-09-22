@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_22_173342) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_22_202753) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -28,6 +28,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_173342) do
     t.string "password_digest"
     t.boolean "admin", default: false
     t.integer "user_id"
+    t.string "twitter_link"
+    t.string "fackbook_link"
+    t.string "reddit_link"
+    t.string "linkedin_link"
+    t.string "tiktok_link"
+    t.string "email_link"
   end
 
 end
