@@ -51,7 +51,7 @@ def destroy
 
   private 
   def user_params
-    params.require(:user).permit(:username, :email, :password )
+    params.require(:user).permit(:username, :email, :password, :phone, :twitter_link, :fackbook_link, :reddit_link, :linkedin_link, :tiktok_link, :email_link)
   end  
 
   def set_user  
