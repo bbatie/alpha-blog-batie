@@ -1,14 +1,20 @@
 <h1 class="text-center mt-4"><%= @user.username %>'s profile</h1>
 <%= gravatar_for @user, size: 200 %>
 
+<!-- Button trigger modal -->
+<div class="text-center">
+<button type="button" class="btn btn-primary col-2" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  Share Profile
+</button>
+</div>
 
   <% if logged_in? && @user == current_user %>
     <div class="text-center mt-4"> 
 
-            <%= link_to 'Edit Your Profile', edit_user_path(@user), class: "btn btn-small btn-primary" %> 
+            <%= link_to 'Edit Your Profile', edit_user_path(@user), class: "btn btn-small btn-primary col-2" %> 
             </div> 
-            <div class="text-center mt-4"> 
-             <%= link_to "Create Article", new_article_path, class: "btn btn-small btn-primary" %> 
+            <div class="text-center mt-4" > 
+             <%= link_to "Create Article", new_article_path, class: "btn btn-small btn-primary col-2" %> 
             </div>
          
             <div class="text-center mt-4"> 
@@ -19,6 +25,41 @@
             </div>
 
              <% end %> 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Share Profile To:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+<button type="button" class="btn btn-secondary btn-lg">Twitter</button>
+<button type="button" class="btn btn-secondary btn-lg mt-3">Facebook</button>
+<button type="button" class="btn btn-secondary btn-lg mt-3">Reddit</button>
+<button type="button" class="btn btn-secondary btn-lg mt-3">LinkedIn</button>
+<button type="button" class="btn btn-secondary btn-lg mt-3">TikTok</button>
+<button type="button" class="btn btn-secondary btn-lg mt-3">Email</button>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 <h3 class="text-center mt-4">Articles</h3>
 
