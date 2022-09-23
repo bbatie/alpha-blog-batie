@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_22_202753) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_23_153311) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -18,6 +18,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_202753) do
     t.datetime "updated_at", null: false
     t.text "notes"
     t.integer "user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,6 +40,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_202753) do
     t.string "linkedin_link"
     t.string "tiktok_link"
     t.string "email_link"
+    t.string "phone"
+    t.string "mobile"
+    t.string "addres"
+    t.string "website_url"
+    t.string "github_url"
+    t.string "twitter_url"
+    t.string "instagram_url"
+    t.string "facebook_url"
+    t.string "linkedin_url"
   end
 
 end
